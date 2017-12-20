@@ -5,7 +5,7 @@ module ArbolFinanciero
         def find(id)
           requestor = Requestor.new
           response = requestor.request(Requestor.join_url(resource_url, id), :get)
-          Utils.convert_to_object(response)
+          Utils.from_response(response)
         end
       end
       def self.included(base)

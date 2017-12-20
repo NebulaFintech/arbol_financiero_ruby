@@ -4,6 +4,7 @@ require "arbol_financiero/links"
 require "arbol_financiero/list"
 require "arbol_financiero/resource"
 require "arbol_financiero/folio"
+require "arbol_financiero/credit_reports"
 require "arbol_financiero/utils"
 require "arbol_financiero/requestor"
 

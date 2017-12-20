@@ -1,6 +1,6 @@
 module ArbolFinanciero
   class Resource
-    attr_reader :id, :type, :links
+    attr_reader :id, :type, :links, :included
     def initialize(id)
       @id = id
     end
@@ -11,7 +11,19 @@ module ArbolFinanciero
     end
 
     def set_links(links)
-      @links = Links.new(links)
+      @links = Links.new(links) if links.present?
+    end
+
+    def set_relationships(relationships)
+      nil
+    end
+
+    def set_included(included)
+      @included ||= []
+      included.each do |data|
+        resource = Utils.from_data(data)
+        @included << resource if resource.present?
+      end
     end
   end
 end
