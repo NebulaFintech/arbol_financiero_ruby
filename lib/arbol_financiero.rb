@@ -16,6 +16,7 @@ module ArbolFinanciero
   @api_version = 'v1'
   @connection = Faraday.new
   @api_key = nil
+  @secret_key = nil
 
   def self.api_base
     @api_base
@@ -39,6 +40,14 @@ module ArbolFinanciero
 
   def self.api_key=(api_key)
     @api_key = api_key
+  end
+
+  def self.secret_key
+    @secret_key
+  end
+
+  def self.secret_key=(secret_key)
+    @secret_key = secret_key
   end
 
   def self.connection

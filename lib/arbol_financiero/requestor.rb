@@ -1,11 +1,14 @@
 module ArbolFinanciero
   class Requestor
-    attr_reader :api_key, :connection, :api_base
+    attr_reader :api_key, :secret_key, :connection, :api_base
     def initialize
       @api_key = ArbolFinanciero.api_key
+      @secret_key = ArbolFinanciero.secret_key
       @connection = ArbolFinanciero.connection
       @api_base = self.class.join_url(ArbolFinanciero.api_base, ArbolFinanciero.api_version)
+      set_headers_for(connection)
       fail "Api key has not been set!" if @api_key.blank?
+      fail "Secret key has not been set!" if @secret_key.blank?
     end
 
     def self.join_url(url, path)
@@ -21,6 +24,23 @@ module ArbolFinanciero
     end
 
     private
+
+      def set_headers_for(connection)
+        connection.headers['Host'] = 'application/json'
+        connection.headers['x-api-key'] = api_key
+        connection.headers['x-signature'] = signature
+        connection.headers['Accept'] = "application/vnd.api+json"
+        connection.headers['Cache-Control'] = "no-cache"
+      end
+
+      def signature
+        timestamp = Time.now.to_i
+        timestamp = timestamp.to_s.slice(0, 9)
+        raw_signature = "#{self.api_key}#{timestamp}"
+        digest = OpenSSL::Digest.new("sha1")
+        OpenSSL::HMAC.hexdigest(digest, secret_key, raw_signature)
+      end
+
 
       def set_request_params(request, params)
         case request.method
