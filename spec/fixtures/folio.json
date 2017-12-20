@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": "2664",
+    "type": "folios",
+    "attributes": {
+      "folio": "2664",
+      "verticalType": "education",
+      "userFullName": "DULCE CAROLINA PASCUAL CASTELLENOS",
+      "financierName": "Laudex",
+      "status": "with_contract",
+      "statusName": "Contratado",
+      "productName": "Financiaturas Flexible UVM",
+      "createdAt": "2016-05-27T10:01:00.222-05:00",
+      "sentToVerificationAt": "2016-05-28T12:15:47.008-05:00",
+      "submittedAt": "2016-06-01T10:14:11.709-05:00",
+      "closedAt": "2016-06-09T17:37:32.384-05:00",
+      "changedStatusAt": "2016-06-09T19:30:41.288-05:00",
+      "daysInProcess": 8,
+      "hoursInProcess": 2,
+      "financialObjectName": "Estudios en México",
+      "institutionName": "UVM",
+      "campusName": "Villahermosa",
+      "studyLevelName": "Licenciatura",
+      "financingPeriods": 5,
+      "financingPeriodLength": 6,
+      "financingPeriodAmount": "30450.0",
+      "studyProgram": "LICENCIATURA EN ADMINISTRACIÓN DE EMPRESAS TURÍSTICAS",
+      "currentDebt": "8000.0",
+      "scholarship": 20,
+      "finishedPeriods": 3,
+      "averageGrade": "9.8"
+    },
+    "relationships": {
+      "product": {
+        "data": {
+          "id": "8",
+          "type": "products"
+        }
+      },
+      "applicant": {
+        "data": {
+          "id": "2664",
+          "type": "applicants"
+        }
+      },
+      "jointObligors": {
+        "data": [{
+          "id": "3223",
+          "type": "jointObligors"
+        }]
+      }
+    },
+    "links": {
+      "web": "https://solicitud.laudex.mx/financier/product_applications/2664",
+      "url": "/api/v1/folios/2664"
+    }
+  }
+}
