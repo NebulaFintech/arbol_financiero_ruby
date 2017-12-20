@@ -17,7 +17,8 @@ And then execute:
 ## Usage
 
 ```
-ArbolFinanciero.api_key = "my_key"
+ArbolFinanciero.api_key = "my_api_key"
+ArbolFinanciero.secret_key = "my_secret_key"
 ArbolFinanciero::Folio.find(folio_id)
 ```
 
