@@ -17,8 +17,10 @@ And then execute:
 ## Usage
 
 ```
-ArbolFinanciero.api_key = "my_api_key"
-ArbolFinanciero.secret_key = "my_secret_key"
+ArbolFinanciero.configure do |config|
+  config.api_key = "my_api_key"
+  config.secret_key = "my_secret_key"
+end
 ArbolFinanciero::Folio.find(folio_id)
 ```
 
