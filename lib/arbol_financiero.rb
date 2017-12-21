@@ -11,46 +11,27 @@ require "arbol_financiero/requestor"
 module ArbolFinanciero
   require 'active_support'
   require 'active_support/core_ext'
-  require "faraday"
-  @api_base = 'https://solicitud.laudex.mx/api'
-  @api_version = 'v1'
-  @connection = Faraday.new
-  @api_key = nil
-  @secret_key = nil
 
-  def self.api_base
-    @api_base
+  class << self
+    attr_accessor :configuration
   end
 
-  def self.api_base=(api_base)
-    @api_base = api_base
+  def self.configure
+    self.configuration ||= Configuration.new
+    yield(configuration)
   end
 
-  def self.api_version
-    @api_version
-  end
+  class Configuration
+    require "faraday"
+    WSDL = 'http://54.156.192.102/WCF_PLD/Service.svc?wsdl'
+    attr_accessor :api_base, :api_version, :connection, :api_key, :secret_key
 
-  def self.api_version=(api_version)
-    @api_version = api_version
-  end
-
-  def self.api_key
-    @api_key
-  end
-
-  def self.api_key=(api_key)
-    @api_key = api_key
-  end
-
-  def self.secret_key
-    @secret_key
-  end
-
-  def self.secret_key=(secret_key)
-    @secret_key = secret_key
-  end
-
-  def self.connection
-    @connection
+    def initialize
+      @api_base = 'https://solicitud.laudex.mx/api'
+      @api_version = 'v1'
+      @connection = Faraday.new
+      @api_key = nil
+      @secret_key = nil
+    end
   end
 end

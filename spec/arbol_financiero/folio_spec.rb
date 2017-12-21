@@ -2,8 +2,10 @@ RSpec.describe ArbolFinanciero::Folio do
   let(:folio_response) { JSON.parse(file_fixture("folio.json").read) }
   let(:folio_id) { "8124" }
   before do
-    ArbolFinanciero.api_key = "my_api_key"
-    ArbolFinanciero.secret_key = "my_secret_key"
+    ArbolFinanciero.configure do |config|
+      config.api_key = "my_api_key"
+      config.secret_key = "my_secret_key"
+    end
   end
   it "gets a folio" do
     allow_any_instance_of(ArbolFinanciero::Requestor).to receive(:request).and_return(folio_response)

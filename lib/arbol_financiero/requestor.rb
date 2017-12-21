@@ -2,10 +2,10 @@ module ArbolFinanciero
   class Requestor
     attr_reader :api_key, :secret_key, :connection, :api_base
     def initialize
-      @api_key = ArbolFinanciero.api_key
-      @secret_key = ArbolFinanciero.secret_key
-      @connection = ArbolFinanciero.connection
-      @api_base = self.class.join_url(ArbolFinanciero.api_base, ArbolFinanciero.api_version)
+      @api_key = ArbolFinanciero.configuration.api_key
+      @secret_key = ArbolFinanciero.configuration.secret_key
+      @connection = ArbolFinanciero.configuration.connection
+      @api_base = self.class.join_url(ArbolFinanciero.configuration.api_base, ArbolFinanciero.configuration.api_version)
       set_headers_for(connection)
       fail "Api key has not been set!" if @api_key.blank?
       fail "Secret key has not been set!" if @secret_key.blank?
