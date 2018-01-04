@@ -23,7 +23,6 @@ module ArbolFinanciero
 
   class Configuration
     require "faraday"
-    WSDL = 'http://54.156.192.102/WCF_PLD/Service.svc?wsdl'
     attr_accessor :api_base, :api_version, :connection, :api_key, :secret_key
 
     def initialize
