@@ -15,9 +15,9 @@ module ArbolFinanciero
       url.to_s + "/" + path.to_s
     end
 
-    def request(resource_url, method, params={})
+    def request(resource_url, http_method, params={})
       response = connection.method(http_method).call do |request|
-        request.url = self.class.join_url(api_base, resource_url)
+        request.url self.class.join_url(api_base, resource_url)
         set_request_params(request, params) if params.present?
       end
       JSON.parse(response.body)
