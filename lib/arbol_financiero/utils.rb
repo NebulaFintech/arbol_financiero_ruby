@@ -7,13 +7,13 @@ module ArbolFinanciero
       }
     end
 
-    def self.from_response(response)
-      resource = self.from_data(response["data"])
+    def self.handle_response(response)
+      resource = self.resource_from_data(response["data"])
       resource.set_included(response["included"]) if resource.present?
       resource
     end
 
-    def self.from_data(data)
+    def self.resource_from_data(data)
       if types[data["type"]]
         resource = types[data["type"]].new(data["id"])
         resource.set_attributes(data["attributes"])

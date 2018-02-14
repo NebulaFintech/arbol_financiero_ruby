@@ -1,6 +1,7 @@
 module ArbolFinanciero
   class Resource
     attr_reader :id, :type, :links, :included
+
     def initialize(id)
       @id = id
     end
@@ -18,10 +19,12 @@ module ArbolFinanciero
       nil
     end
 
-    def set_included(included)
+    def set_included(included_attrs)
       @included ||= []
-      included.each do |data|
-        resource = Utils.from_data(data)
+      return if included_attrs.blank?
+
+      included_attrs.each do |data|
+        resource = Utils.resource_from_data(data)
         @included << resource if resource.present?
       end
     end

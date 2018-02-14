@@ -1,6 +1,7 @@
 module ArbolFinanciero
   class Folio < Resource
     include Mixins::Find
+
     ATTR_IVARS = [:folio, :verticalType, :userFullName,
         :financierName, :status, :statusName,:productName,
         :submittedAt, :closedAt, :changedStatusAt, :hoursInProcess,
@@ -8,6 +9,7 @@ module ArbolFinanciero
         :financingPeriods, :financingPeriodLength,
         :financingPeriodAmount, :studyProgram, :scholarship,
         :finishedPeriods, :averageGrade]
+
     attr_reader :productId, :applicantId
     attr_reader(*ATTR_IVARS)
 

@@ -3,6 +3,7 @@
 module ArbolFinanciero
   class Requestor
     attr_reader :api_key, :secret_key, :connection, :api_base
+
     def initialize
       fail "ArbolFinanciero.configure has not been called!" unless ArbolFinanciero.configuration
 
