@@ -26,7 +26,7 @@ module ArbolFinanciero
     attr_accessor :api_base, :api_version, :connection, :api_key, :secret_key
 
     def initialize
-      @api_base = 'https://nebula-test.arbolfinanciero.com/api'
+      @api_base = 'http://www.arbolfinanciero.com/api'
       @api_version = 'v1'
       @connection = Faraday.new
       @api_key = nil

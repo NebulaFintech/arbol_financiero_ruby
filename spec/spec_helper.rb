@@ -1,5 +1,6 @@
 require "bundler/setup"
 require "arbol_financiero"
+require "yaml"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

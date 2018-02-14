@@ -26,6 +26,7 @@ module ArbolFinanciero
         request.url self.class.join_url(api_base, resource_url)
         set_request_params(request, params) if params.present?
       end
+      puts response.body
       JSON.parse(response.body)
     end
 
