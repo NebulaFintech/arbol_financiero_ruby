@@ -1,0 +1,132 @@
+{
+  "data": {
+    "id": "282",
+    "type": "folios",
+    "attributes": {
+      "folio": "NB0024",
+      "verticalType": "personal",
+      "userFullName": "JOAQUIN RIVERA DIEZ",
+      "financierName": "Nebula",
+      "status": "sent",
+      "statusName": "En proceso",
+      "productName": "Préstamo Personal",
+      "createdAt": "2018-02-13T17:01:52.255-06:00",
+      "sentToVerificationAt": null,
+      "submittedAt": "2018-02-14T16:45:13.897-06:00",
+      "closedAt": null,
+      "changedStatusAt": "2018-02-14T16:45:39.237-06:00",
+      "daysInProcess": 6,
+      "hoursInProcess": 88,
+      "financialObjectName": null,
+      "institutionName": null,
+      "campusName": "N/A",
+      "studyLevelName": null,
+      "financingPeriods": 12,
+      "financingPeriodLength": null,
+      "financingPeriodAmount": null,
+      "studyProgram": null,
+      "currentDebt": null,
+      "scholarship": null,
+      "finishedPeriods": null,
+      "averageGrade": null,
+      "financialPurpose": "medical_emergency",
+      "financingPeriodsConfirmation": true
+    },
+    "relationships": {
+      "product": {
+        "data": {
+          "id": "23",
+          "type": "products"
+        }
+      },
+      "applicant": {
+        "data": {
+          "id": "186",
+          "type": "applicants"
+        }
+      },
+      "jointObligors": {
+        "data": []
+      }
+    },
+    "links": {
+      "web": "http://creditos-st.herokuapp.com/financier/product_applications/282",
+      "url": "/api/v1/folios/282"
+    }
+  },
+  "included": [{
+    "id": "186",
+    "type": "applicants",
+    "attributes": {
+      "fullName": "JOAQUIN RIVERA DIEZ"
+    },
+    "relationships": {
+      "address": {
+        "data": {
+          "id": "1479",
+          "type": "addresses"
+        }
+      },
+      "creditReport": {
+        "data": {
+          "id": "557",
+          "type": "creditReports"
+        }
+      },
+      "employmentRecords": {
+        "data": [{
+          "id": "992",
+          "type": "employmentRecords"
+        }]
+      },
+      "familyData": {
+        "data": {
+          "id": "692",
+          "type": "familyData"
+        }
+      },
+      "financialData": {
+        "data": {
+          "id": "636",
+          "type": "financialData"
+        }
+      },
+      "personalData": {
+        "data": {
+          "id": "691",
+          "type": "personalData"
+        }
+      },
+      "personalReferences": {
+        "data": [{
+          "id": "1742",
+          "type": "personalReferences"
+        }, {
+          "id": "1743",
+          "type": "personalReferences"
+        }]
+      },
+      "previousStudies": {
+        "data": [{
+          "id": "784",
+          "type": "previousStudies"
+        }]
+      },
+      "academicDocuments": {
+        "data": []
+      },
+      "addressDocuments": {
+        "data": []
+      },
+      "employmentDocuments": {
+        "data": []
+      },
+      "personalDocuments": {
+        "data": []
+      }
+    },
+    "links": {
+      "url": "/api/v1/folios/282/applicant"
+    }
+  }]
+}

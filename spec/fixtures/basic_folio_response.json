@@ -1,0 +1,57 @@
+{
+  "data": {
+    "id": "282",
+    "type": "folios",
+    "attributes": {
+      "folio": "NB0024",
+      "verticalType": "personal",
+      "userFullName": "JOAQUIN RIVERA DIEZ",
+      "financierName": "Nebula",
+      "status": "sent",
+      "statusName": "En proceso",
+      "productName": "Préstamo Personal",
+      "createdAt": "2018-02-13T17:01:52.255-06:00",
+      "sentToVerificationAt": null,
+      "submittedAt": "2018-02-14T16:45:13.897-06:00",
+      "closedAt": null,
+      "changedStatusAt": "2018-02-14T16:45:39.237-06:00",
+      "daysInProcess": 6,
+      "hoursInProcess": 88,
+      "financialObjectName": null,
+      "institutionName": null,
+      "campusName": "N/A",
+      "studyLevelName": null,
+      "financingPeriods": 12,
+      "financingPeriodLength": null,
+      "financingPeriodAmount": null,
+      "studyProgram": null,
+      "currentDebt": null,
+      "scholarship": null,
+      "finishedPeriods": null,
+      "averageGrade": null,
+      "financialPurpose": "medical_emergency",
+      "financingPeriodsConfirmation": true
+    },
+    "relationships": {
+      "product": {
+        "data": {
+          "id": "23",
+          "type": "products"
+        }
+      },
+      "applicant": {
+        "data": {
+          "id": "186",
+          "type": "applicants"
+        }
+      },
+      "jointObligors": {
+        "data": []
+      }
+    },
+    "links": {
+      "web": "http://creditos-st.herokuapp.com/financier/product_applications/282",
+      "url": "/api/v1/folios/282"
+    }
+  }
+}

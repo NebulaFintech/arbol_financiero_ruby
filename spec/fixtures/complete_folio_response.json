@@ -1,0 +1,299 @@
+{
+  "data": {
+    "id": "282",
+    "type": "folios",
+    "attributes": {
+      "folio": "NB0024",
+      "verticalType": "personal",
+      "userFullName": "JOAQUIN RIVERA DIEZ",
+      "financierName": "Nebula",
+      "status": "sent",
+      "statusName": "En proceso",
+      "productName": "Préstamo Personal",
+      "createdAt": "2018-02-13T17:01:52.255-06:00",
+      "sentToVerificationAt": null,
+      "submittedAt": "2018-02-14T16:45:13.897-06:00",
+      "closedAt": null,
+      "changedStatusAt": "2018-02-14T16:45:39.237-06:00",
+      "daysInProcess": 6,
+      "hoursInProcess": 88,
+      "financialObjectName": null,
+      "institutionName": null,
+      "campusName": "N/A",
+      "studyLevelName": null,
+      "financingPeriods": 12,
+      "financingPeriodLength": null,
+      "financingPeriodAmount": null,
+      "studyProgram": null,
+      "currentDebt": null,
+      "scholarship": null,
+      "finishedPeriods": null,
+      "averageGrade": null,
+      "financialPurpose": "medical_emergency",
+      "financingPeriodsConfirmation": true
+    },
+    "relationships": {
+      "product": {
+        "data": {
+          "id": "23",
+          "type": "products"
+        }
+      },
+      "applicant": {
+        "data": {
+          "id": "186",
+          "type": "applicants"
+        }
+      },
+      "jointObligors": {
+        "data": []
+      }
+    },
+    "links": {
+      "web": "http://creditos-st.herokuapp.com/financier/product_applications/282",
+      "url": "/api/v1/folios/282"
+    }
+  },
+  "included": [{
+    "id": "23",
+    "type": "products",
+    "attributes": {
+      "verticalType": "personal",
+      "financierName": "Nebula",
+      "name": "Préstamo Personal",
+      "description": "Crédito para uso personal"
+    }
+  }, {
+    "id": "186",
+    "type": "applicants",
+    "attributes": {
+      "fullName": "JOAQUIN RIVERA DIEZ"
+    },
+    "relationships": {
+      "address": {
+        "data": {
+          "id": "1479",
+          "type": "addresses"
+        }
+      },
+      "creditReport": {
+        "data": {
+          "id": "557",
+          "type": "creditReports"
+        }
+      },
+      "employmentRecords": {
+        "data": [{
+          "id": "992",
+          "type": "employmentRecords"
+        }]
+      },
+      "familyData": {
+        "data": {
+          "id": "692",
+          "type": "familyData"
+        }
+      },
+      "financialData": {
+        "data": {
+          "id": "636",
+          "type": "financialData"
+        }
+      },
+      "personalData": {
+        "data": {
+          "id": "691",
+          "type": "personalData"
+        }
+      },
+      "personalReferences": {
+        "data": [{
+          "id": "1742",
+          "type": "personalReferences"
+        }, {
+          "id": "1743",
+          "type": "personalReferences"
+        }]
+      },
+      "previousStudies": {
+        "data": [{
+          "id": "784",
+          "type": "previousStudies"
+        }]
+      },
+      "academicDocuments": {
+        "data": []
+      },
+      "addressDocuments": {
+        "data": []
+      },
+      "employmentDocuments": {
+        "data": []
+      },
+      "personalDocuments": {
+        "data": []
+      }
+    },
+    "links": {
+      "url": "/api/v1/folios/282/applicant"
+    }
+  }, {
+    "id": "1479",
+    "type": "addresses",
+    "attributes": {
+      "street": "wd",
+      "suburb": "Colinas del Rio",
+      "internalNumber": "",
+      "externalNumber": "2",
+      "cityCouncil": "Aguascalientes",
+      "zipCode": "20010",
+      "state": "Aguascalientes",
+      "residentYears": null,
+      "livingType": null,
+      "updatedAt": "2018-02-13T17:04:11.861-06:00"
+    }
+  }, {
+    "id": "557",
+    "type": "creditReports",
+    "attributes": {
+      "bureauReportResponse": null,
+      "bureauReportSavedAt": null,
+      "updatedAt": "2018-02-13T17:01:52.349-06:00"
+    }
+  }, {
+    "id": "992",
+    "type": "employmentRecords",
+    "attributes": {
+      "organizationName": null,
+      "organizationType": null,
+      "activityType": null,
+      "positionName": null,
+      "immediateChiefPosition": null,
+      "positionAge": "1",
+      "phone": null,
+      "street": null,
+      "suburb": null,
+      "externalNumber": null,
+      "internalNumber": null,
+      "cityCouncil": null,
+      "zipCode": null,
+      "state": null,
+      "referenceName": null,
+      "referenceFirstSurname": null,
+      "referenceSecondSurname": null,
+      "referenceType": null,
+      "referencePhone": null,
+      "referenceExtension": null,
+      "organizationWebsite": null,
+      "updatedAt": "2018-02-13T17:03:57.981-06:00"
+    }
+  }, {
+    "id": "692",
+    "type": "familyData",
+    "attributes": {
+      "maritalStatus": "married",
+      "regimen": null,
+      "childNumber": null,
+      "childrenAges": null,
+      "dependents": null,
+      "spouseName": null,
+      "spouseFirstSurname": null,
+      "spouseSecondSurname": null,
+      "spouseBirthDate": null,
+      "updatedAt": "2018-02-13T17:03:57.642-06:00"
+    }
+  }, {
+    "id": "636",
+    "type": "financialData",
+    "attributes": {
+      "netIncomeVerified": "324.0",
+      "netIncomeVerifiedSecondary": null,
+      "netIncomeUnverified": null,
+      "netIncomeVerifiedDocument": null,
+      "netIncomeVerifiedSecondaryDocument": null,
+      "savings": null,
+      "statsRooms": "",
+      "statsFlooring": "",
+      "statsRestrooms": "",
+      "statsShower": "",
+      "statsStove": "",
+      "statsLightbulbs": "",
+      "statsCars": "",
+      "statsEducation": "",
+      "incomePaymentFrequency": null,
+      "incomePaymentType": null,
+      "bankName": null,
+      "bankAccount": null,
+      "transferType": null,
+      "cardOrClabeNumber": null,
+      "personalExpensesDescription": null,
+      "financialDataUseConsentment": null,
+      "legalDeclaration": null,
+      "updatedAt": "2018-02-13T17:03:57.829-06:00"
+    }
+  }, {
+    "id": "691",
+    "type": "personalData",
+    "attributes": {
+      "name": "Joaquin",
+      "firstSurname": "Rivera",
+      "secondSurname": "Diez",
+      "gender": false,
+      "phone": null,
+      "mobilePhone": "5533359901",
+      "birthday": "1979-09-01",
+      "birthCountry": null,
+      "birthState": null,
+      "rfc": "RIDJ790901TYA",
+      "curp": null,
+      "employmentStatus": "Fijo",
+      "email": "joaquin+0002@arbolfinanciero.com",
+      "relationshipWithUser": null,
+      "lastStudyLevel": null,
+      "cellphoneModel": null,
+      "cellphonePayment": null,
+      "nickname": "",
+      "facebookName": "",
+      "personalDataUseConsentment": null,
+      "updatedAt": "2018-02-13T17:03:57.482-06:00"
+    }
+  }, {
+    "id": "1742",
+    "type": "personalReferences",
+    "attributes": {
+      "name": null,
+      "firstSurname": null,
+      "secondSurname": null,
+      "phone": null,
+      "mobilePhone": null,
+      "contactTime": null,
+      "referenceType": null,
+      "extension": null,
+      "updatedAt": "2018-02-13T17:01:52.520-06:00"
+    }
+  }, {
+    "id": "1743",
+    "type": "personalReferences",
+    "attributes": {
+      "name": null,
+      "firstSurname": null,
+      "secondSurname": null,
+      "phone": null,
+      "mobilePhone": null,
+      "contactTime": null,
+      "referenceType": null,
+      "extension": null,
+      "updatedAt": "2018-02-13T17:01:52.530-06:00"
+    }
+  }, {
+    "id": "784",
+    "type": "previousStudies",
+    "attributes": {
+      "studiesType": "",
+      "institutionName": null,
+      "averageGrade": null,
+      "publicOrPrivate": "Privada",
+      "updatedAt": "2018-02-13T17:01:52.636-06:00"
+    }
+  }]
+}
