@@ -1,0 +1,300 @@
+{
+  "data": {
+    "id": "96",
+    "type": "scores",
+    "attributes": {
+      "code": null,
+      "score": null,
+      "scoreText": null,
+      "disqualified": true,
+      "scoreReason": "",
+      "currentDebt": null,
+      "financingPeriods": null,
+      "financingPeriodLength": null,
+      "financingPeriodAmount": null,
+      "finishedPeriods": null,
+      "totalStudyPeriods": 9,
+      "financialObjectName": "",
+      "institutionName": "",
+      "campusName": "",
+      "studyLevelName": "",
+      "studyProgram": "",
+      "userFullName": "JORGE GAJON ",
+      "userEmploymentStatus": "Fijo",
+      "userEmploymentPositionAge": "14",
+      "jointObligorEmploymentStatus": null,
+      "jointObligorEmploymentPositionAge": null,
+      "userPreviousStudiesType": null,
+      "userPreviousStudiesPublicOrPrivate": "Privada",
+      "verticalType": "education",
+      "createdAt": "2018-02-14T17:18:51.986-06:00"
+    },
+    "relationships": {
+      "user": {
+        "data": {
+          "id": "204",
+          "type": "users"
+        }
+      },
+      "jointObligor": {
+        "data": {
+          "id": "259",
+          "type": "jointObligors"
+        }
+      },
+      "evaluator": {
+        "data": {
+          "id": "20",
+          "type": "financierUsers"
+        }
+      }
+    }
+  },
+  "included": [{
+    "id": "204",
+    "type": "users",
+    "attributes": {
+      "email": "jorge+testnebula@arbolfinanciero.com",
+      "fullName": "JORGE GAJON ",
+      "createdAt": "2018-02-14T17:18:50.031-06:00"
+    },
+    "relationships": {
+      "address": {
+        "data": {
+          "id": "1150",
+          "type": "addresses"
+        }
+      },
+      "creditReport": {
+        "data": {
+          "id": "679",
+          "type": "creditReports"
+        }
+      },
+      "financialData": {
+        "data": {
+          "id": "798",
+          "type": "financialData"
+        }
+      },
+      "personalData": {
+        "data": {
+          "id": "803",
+          "type": "personalData"
+        }
+      }
+    }
+  }, {
+    "id": "1150",
+    "type": "addresses",
+    "attributes": {
+      "street": "asdf",
+      "suburb": "Fundición II",
+      "internalNumber": "232",
+      "externalNumber": "23",
+      "cityCouncil": "Aguascalientes",
+      "zipCode": "20016",
+      "state": "Aguascalientes",
+      "residentYears": null,
+      "livingType": null,
+      "updatedAt": "2018-02-14T17:25:10.453-06:00"
+    }
+  }, {
+    "id": "679",
+    "type": "creditReports",
+    "attributes": {
+      "bureauReportResponse": "INTL11SOLICITANTE 404 MX0000FF3717100110PN05PEREZ0008CASTILLO0206VICTOR0307AUGUSTO0408270319910513PECV910327KR80802MX090111101S1201F141306531176186191518PECV910327MJCZLL00PA16LOMAS 2333 0119RAMON LOPEZ VELARDE0211GUADALAJARA0311GUADALAJARA0403JAL0505447600708338596561001H120818052015PA16LOMAS 2334 0212HUIXQUILUCAN0325HUIXQUILUCAN DE DEGOLLADO0402EM050552784120814122013PA19LOMAS 1212 0117BEATRIZ HERNANDEZ0311GUADALAJARA0403JAL0505447600708360454131001H120804022011TL08090920150216TIENDA COMERCIAL0501I0601R0702CC0802MX1101Z1308050820111408160520151508211220141708310820151801A210363322020+23042700240102602UR2724UUU11111111111111111111128083107201529083108201136010370831082011380200TL08080920150205BANCO0501I0601R0702CC0802MX1101Z12031251308120320151408310820151508310820151708310820151801A2104485622052601+23051000024010260201270511111280831072015290831032015TL08030920150215MICROFINANCIERA0501I0601I0702PL0802MX1002361101M120111308041020141408310820151508041020141708310820151801A21051960022056470+2305196002401026020127101111111111280831072015290830102014TL08080920150205BANCO0501I0601R0702CC0802MX1101Z12031341308240620141408310820151508310820151708310820151801A2105106882204182+23051073024010260201271411111111111111280831072015290830062014TL08101120140215MICROFINANCIERA0501I0601I0702PL0802N$1002121101M120101308160820141408041020141508160820141608041020141708311020141801A2104190022020+2304190024010260201270211280830092014290831082014TL08101120140215MICROFINANCIERA0501I0601I0702PL0802N$1002361101M120101308210320141408041020141508210320141608041020141708311020141801A2104415022020+230441502401026020127071111111280830092014290831032014TL08010920140215MICROFINANCIERA0501I0601I0702PL0802N$1002121101M120101308211220131408160820141508211220131608160820141708310820141801A2104400022020+2304400024010250112602012708222212212808310720142908311220133603390370831012014380202TL08020920140205BANCO0501I0601R0702CC0802N$1101Z120101308081020131408280820141508280820141608290820141708290820141801A2104293922020+2304300024010260201271011111111112808310720142908311020133002CCTL08040420140215MICROFINANCIERA0501I0601I0702PL0802N$100161101M120101308170120141408210320141508170120141608210320141708310320141801A2104120022020+2304120024010260201270211280828022014290831012014TL08070220140215MICROFINANCIERA0501I0601I0702PL0802N$1002361101M120101308310120131408170120141508310120131608170120141708310120141801A21051390022020+23051390024010260201271211111111111028083112201329083101201336010370831012013380200TL08200220130215MICROFINANCIERA0501I0601I0702PL0802N$1002601101M120101308070120121408310120131508070120121608310120131708310120131801A21057500022020+230575000240102602012712111111111111280831122012290831012012TL08160220120215MICROFINANCIERA0501I0601I0702PL0802N$1002361101M120101308241220111408070120121508241220111608070120121708310120121801A21051199022020+2305119902401026020127011280831122011290831122011TL08050120120215MICROFINANCIERA0501I0601I0702PL0802N$1002121101M120101308171220111408231220111508171220111608231220111708311220111801A21051500022020+23051500024010260201TL08141020110215MICROFINANCIERA0501I0601I0702PL0802N$100161101M120101308110320111408100920111508110320111608100920111708300920111801A2104120022020+2304120024010250112602012706121111280831082011290831032011360222370831072011380202TL08141020110215MICROFINANCIERA0501I0601I0702PL0802N$100161101M120101308290120111408100920111508290120111608100920111708300920111801A2104200022020+2304200024010250112602012708332111112808310820112908310120113603391370831072011380203IQ08150920150110FF371710010206KIKOYA0402ST060100701IIQ08180520150205BANCO0402CC060100701IIQ08180520150205BANCO0402CC060100701IIQ08150320140205BANCO0402CC060100701IIQ08141220130205BANCO0402CC060100701IIQ08161020130205BANCO0402CC060100701IIQ08011020130205BANCO0402CC060100701IRS08040220110002000102000202000302000402000502000602140702000802010904001510040011110400041204001113040000140400051502001602021701N1805NNNNN1901N2002MX21051617722052343023052783+24010250325926021127051960028056470+2901030011310200320200330200340829012011350812032015360206370818052015380200390800000000400200410800000000HI081509201500030020116BURO DE CREDITO 0221NO EXISTE INFORMACIONHR081509201500030020116BURO DE CREDITO 0221NO EXISTE INFORMACIONSC08BC SCORE000300701040726020229030214040218ES050436300090692682810102**",
+      "bureauReportSavedAt": "2018-02-14T17:25:51.543-06:00",
+      "updatedAt": "2018-02-14T17:25:51.611-06:00"
+    }
+  }, {
+    "id": "798",
+    "type": "financialData",
+    "attributes": {
+      "netIncomeVerified": "23223.0",
+      "netIncomeVerifiedSecondary": null,
+      "netIncomeUnverified": null,
+      "netIncomeVerifiedDocument": null,
+      "netIncomeVerifiedSecondaryDocument": null,
+      "savings": null,
+      "statsRooms": "",
+      "statsFlooring": "",
+      "statsRestrooms": "",
+      "statsShower": "",
+      "statsStove": "",
+      "statsLightbulbs": "",
+      "statsCars": "",
+      "statsEducation": "",
+      "incomePaymentFrequency": null,
+      "incomePaymentType": null,
+      "bankName": null,
+      "bankAccount": null,
+      "transferType": null,
+      "cardOrClabeNumber": null,
+      "personalExpensesDescription": null,
+      "financialDataUseConsentment": null,
+      "legalDeclaration": null,
+      "updatedAt": "2018-02-14T17:24:58.697-06:00"
+    }
+  }, {
+    "id": "803",
+    "type": "personalData",
+    "attributes": {
+      "name": "Jorge",
+      "firstSurname": "Gajon",
+      "secondSurname": "",
+      "gender": false,
+      "phone": null,
+      "mobilePhone": "5518219512",
+      "birthday": "1906-04-01",
+      "birthCountry": null,
+      "birthState": null,
+      "rfc": "GAJO060401JB4",
+      "curp": null,
+      "employmentStatus": "Fijo",
+      "email": "jorge+testnebula@arbolfinanciero.com",
+      "relationshipWithUser": null,
+      "lastStudyLevel": null,
+      "cellphoneModel": null,
+      "cellphonePayment": null,
+      "nickname": "",
+      "facebookName": "asdf",
+      "personalDataUseConsentment": null,
+      "updatedAt": "2018-02-14T17:24:58.626-06:00"
+    }
+  }, {
+    "id": "259",
+    "type": "jointObligors",
+    "attributes": {
+      "fullName": "",
+      "createdAt": "2018-02-14T17:18:50.735-06:00"
+    },
+    "relationships": {
+      "address": {
+        "data": {
+          "id": "1156",
+          "type": "addresses"
+        }
+      },
+      "creditReport": {
+        "data": {
+          "id": "680",
+          "type": "creditReports"
+        }
+      },
+      "financialData": {
+        "data": {
+          "id": "800",
+          "type": "financialData"
+        }
+      },
+      "personalData": {
+        "data": {
+          "id": "805",
+          "type": "personalData"
+        }
+      }
+    }
+  }, {
+    "id": "1156",
+    "type": "addresses",
+    "attributes": {
+      "street": "asdf",
+      "suburb": "Fundición II",
+      "internalNumber": "232",
+      "externalNumber": "23",
+      "cityCouncil": "Aguascalientes",
+      "zipCode": "20016",
+      "state": "Aguascalientes",
+      "residentYears": null,
+      "livingType": null,
+      "updatedAt": "2018-02-14T17:25:10.498-06:00"
+    }
+  }, {
+    "id": "680",
+    "type": "creditReports",
+    "attributes": {
+      "bureauReportResponse": null,
+      "bureauReportSavedAt": null,
+      "updatedAt": "2018-02-14T17:18:50.791-06:00"
+    }
+  }, {
+    "id": "800",
+    "type": "financialData",
+    "attributes": {
+      "netIncomeVerified": 0,
+      "netIncomeVerifiedSecondary": null,
+      "netIncomeUnverified": null,
+      "netIncomeVerifiedDocument": null,
+      "netIncomeVerifiedSecondaryDocument": null,
+      "savings": null,
+      "statsRooms": "",
+      "statsFlooring": "",
+      "statsRestrooms": "",
+      "statsShower": "",
+      "statsStove": "",
+      "statsLightbulbs": "",
+      "statsCars": "",
+      "statsEducation": "",
+      "incomePaymentFrequency": null,
+      "incomePaymentType": null,
+      "bankName": null,
+      "bankAccount": null,
+      "transferType": null,
+      "cardOrClabeNumber": null,
+      "personalExpensesDescription": null,
+      "financialDataUseConsentment": null,
+      "legalDeclaration": null,
+      "updatedAt": "2018-02-14T17:18:50.765-06:00"
+    }
+  }, {
+    "id": "805",
+    "type": "personalData",
+    "attributes": {
+      "name": null,
+      "firstSurname": null,
+      "secondSurname": null,
+      "gender": null,
+      "phone": null,
+      "mobilePhone": null,
+      "birthday": null,
+      "birthCountry": null,
+      "birthState": null,
+      "rfc": null,
+      "curp": null,
+      "employmentStatus": "Fijo",
+      "email": null,
+      "relationshipWithUser": null,
+      "lastStudyLevel": null,
+      "cellphoneModel": null,
+      "cellphonePayment": null,
+      "nickname": null,
+      "facebookName": null,
+      "personalDataUseConsentment": null,
+      "updatedAt": "2018-02-14T17:18:50.745-06:00"
+    }
+  }, {
+    "id": "20",
+    "type": "financierUsers",
+    "attributes": {
+      "createdAt": "2018-02-14T16:35:18.332-06:00",
+      "email": "jorge+nebula@arbolfinanciero.com",
+      "name": "Jorge Gajon"
+    },
+    "relationships": {
+      "financier": {
+        "data": {
+          "id": "16",
+          "type": "financiers"
+        }
+      }
+    }
+  }, {
+    "id": "16",
+    "type": "financiers",
+    "attributes": {
+      "name": "Nebula",
+      "createdAt": "2018-01-12T20:35:12.558-06:00"
+    }
+  }]
+}
