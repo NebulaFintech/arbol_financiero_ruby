@@ -1,10 +1,12 @@
 require "arbol_financiero/version"
 require "arbol_financiero/mixins/find"
+require "arbol_financiero/mixins/where"
 require "arbol_financiero/links"
 require "arbol_financiero/list"
 require "arbol_financiero/resource"
 require "arbol_financiero/folio"
-require "arbol_financiero/credit_reports"
+require "arbol_financiero/applicant"
+require "arbol_financiero/credit_report"
 require "arbol_financiero/utils"
 require "arbol_financiero/requestor"
 

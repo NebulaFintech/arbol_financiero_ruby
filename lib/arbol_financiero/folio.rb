@@ -1,6 +1,7 @@
 module ArbolFinanciero
   class Folio < Resource
     include Mixins::Find
+    include Mixins::Where
 
     ATTR_IVARS = [:folio, :verticalType, :userFullName,
         :financierName, :status, :statusName,:productName,
@@ -10,7 +11,6 @@ module ArbolFinanciero
         :financingPeriodAmount, :studyProgram, :scholarship,
         :finishedPeriods, :averageGrade]
 
-    attr_reader :productId, :applicantId
     attr_reader(*ATTR_IVARS)
 
     def initialize(id)
@@ -22,9 +22,8 @@ module ArbolFinanciero
       "folios"
     end
 
-    def set_relationships(relationships)
-      @productId = relationships["product"]["data"]["id"] rescue nil
-      @applicantId = relationships["applicant"]["data"]["id"] rescue nil
+    def applicants
+      included.select{|i| i.type == "applicants" }
     end
   end
 end
