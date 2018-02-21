@@ -14,28 +14,21 @@ module ArbolFinanciero
       included = response["included"]
       case data
       when Hash
-        resource = self.build_resource(data)
-        if resource
-          resource.set_included(included) if included && resource.relationships
-          resource
-        end
+        self.build_resource(data, included)
       when Array
         data.map do |d|
-          resource = self.build_resource(d)
-          if resource
-            resource.set_included(included) if included && resource.relationships
-            resource
-          end
+          self.build_resource(d, included)
         end
       end
     end
 
-    def self.build_resource(resource_data)
+    def self.build_resource(resource_data, included)
       if types[resource_data["type"]]
         resource = types[resource_data["type"]].new(resource_data["id"])
         resource.set_attributes(resource_data["attributes"])
         resource.set_relationships(resource_data["relationships"])
         resource.set_links(resource_data["links"])
+        resource.set_included(included) if included && resource.relationships
         resource
       end
     end
