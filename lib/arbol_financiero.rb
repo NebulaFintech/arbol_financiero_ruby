@@ -14,6 +14,7 @@ require "arbol_financiero/financial_data"
 require "arbol_financiero/personal_data"
 require "arbol_financiero/personal_reference"
 require "arbol_financiero/previous_studies"
+require "arbol_financiero/score"
 require "arbol_financiero/utils"
 require "arbol_financiero/requestor"
 
