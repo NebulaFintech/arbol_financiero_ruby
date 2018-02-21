@@ -10,10 +10,6 @@ module ArbolFinanciero
       super(id)
     end
 
-    def self.resource_url
-      "applicants"
-    end
-
     def credit_reports
       included.select{|i| i.type == "creditReports"}
     end
