@@ -58,7 +58,7 @@ RSpec.describe ArbolFinanciero::Folio do
   it "gets a list of folios" do
     allow_any_instance_of(ArbolFinanciero::Requestor).to receive(:request).and_return(folios_list)
     folios = ArbolFinanciero::Folio.where
-    expect(folios).to be_a(Array)
+    expect(folios).to be_a(ArbolFinanciero::List)
     expect(folios.count).to eq(2)
 
     folio = folios.first

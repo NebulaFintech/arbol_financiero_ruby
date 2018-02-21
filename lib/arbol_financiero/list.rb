@@ -1,14 +1,32 @@
 module ArbolFinanciero
-  attr_reader :resources, :current_page, :first_page, :last_page, :previous_page, :next_page
   class List
+    attr_reader :resources, :self, :next, :last
     def initialize(options={})
       options = options.with_indifferent_access
       @resources = options.fetch(:resources)
-      @current_page = options.fetch(:current_page)
-      @first_page = options.fetch(:first_page, nil)
-      @last_page = options.fetch(:last_page, nil)
-      @previous_page = options.fetch(:previous_page, nil)
-      @next_page = options.fetch(:next_page, nil)
+      @self = options.fetch(:self)
+      @next = options.fetch(:next, nil)
+      @last = options.fetch(:last, nil)
+    end
+
+    def [](index)
+      resources[index]
+    end
+
+    def first
+      resources.first
+    end
+
+    def last
+      resources.last
+    end
+
+    def count
+      resources.count
+    end
+
+    def each(&block)
+      resources.each(&block)
     end
   end
 end
