@@ -1,0 +1,10 @@
+# https://github.com/bbatsov/ruby-style-guide
+# https://github.com/bbatsov/rubocop/blob/master/config/default.yml
+# http://relaxed.ruby.style/
+
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.4
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

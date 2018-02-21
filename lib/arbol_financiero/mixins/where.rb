@@ -1,10 +1,10 @@
 module ArbolFinanciero
   module Mixins
-    module Find
+    module Where
       module ClassMethods
-        def find(id, params = {})
+        def where(params = {})
           requestor = Requestor.new
-          response = requestor.request(Requestor.join_url(resource_url, id), :get, params)
+          response = requestor.request(resource_url, :get, params)
           Utils.handle_response(response)
         end
       end
