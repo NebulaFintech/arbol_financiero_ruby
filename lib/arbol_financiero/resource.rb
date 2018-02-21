@@ -7,6 +7,10 @@ module ArbolFinanciero
       @included = []
     end
 
+    def self.resource_url
+      self.name.demodulize.to_s.camelize(:lower).pluralize
+    end
+
     def set_attributes(attributes)
       attributes = attributes.with_indifferent_access
       self.class::ATTR_IVARS.map{ |ivar| instance_variable_set("@#{ivar}", attributes[ivar]) }

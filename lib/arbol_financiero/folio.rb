@@ -18,10 +18,6 @@ module ArbolFinanciero
       super(id)
     end
 
-    def self.resource_url
-      "folios"
-    end
-
     def applicants
       included.select{|i| i.type == "applicants" }
     end

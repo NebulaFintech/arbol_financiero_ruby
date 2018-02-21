@@ -17,7 +17,7 @@ RSpec.describe ArbolFinanciero::Folio do
     folio_id = '282'
     allow_any_instance_of(ArbolFinanciero::Requestor).to receive(:request).and_return(complete_folio_response)
     folio = ArbolFinanciero::Folio.find(folio_id, include: "**")
-
+    
     expect(folio).to be_a(ArbolFinanciero::Folio)
     expect(folio.id).to eq(folio_id)
     expect(folio.verticalType).to eq("personal")

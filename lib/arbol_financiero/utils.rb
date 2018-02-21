@@ -4,7 +4,14 @@ module ArbolFinanciero
       @types ||= {
         "folios" => ::ArbolFinanciero::Folio,
         "applicants" => ::ArbolFinanciero::Applicant,
-        "creditReports" => ::ArbolFinanciero::CreditReport
+        "creditReports" => ::ArbolFinanciero::CreditReport,
+        "addresses" => ::ArbolFinanciero::Address,
+        "employmentRecords" => ::ArbolFinanciero::EmploymentRecord,
+        "familyData" => ::ArbolFinanciero::FamilyData,
+        "financialData" => ::ArbolFinanciero::FinancialData,
+        "personalData" => ::ArbolFinanciero::PersonalData,
+        "personalReferences" => ::ArbolFinanciero::PersonalReference,
+        "previousStudies" => ::ArbolFinanciero::PreviousStudies
       }
     end
 
