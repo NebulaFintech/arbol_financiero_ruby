@@ -12,13 +12,13 @@ module ArbolFinanciero
       response = response.with_indifferent_access
       data = response["data"]
       included = response["included"]
+      links = response["links"]
       case data
       when Hash
         self.build_resource(data, included)
       when Array
-        data.map do |d|
-          self.build_resource(d, included)
-        end
+
+        List.new(links.merge(resources: data.map{|d| self.build_resource(d, included)}))
       end
     end
 
