@@ -1,3 +1,6 @@
+## [0.6.0](https://github.com/NebulaFintech/arbol_financiero_ruby/releases/tag/v0.6.0) - 2018-02-21
+### Change
+- Add ScoreTable.
 ## [0.5.0](https://github.com/NebulaFintech/arbol_financiero_ruby/releases/tag/v0.5.0) - 2018-02-21
 ### Change
 - Add submodels.
