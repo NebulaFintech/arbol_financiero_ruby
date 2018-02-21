@@ -1,9 +1,10 @@
 module ArbolFinanciero
   class Resource
-    attr_reader :id, :type, :links, :included
+    attr_reader :id, :type, :links, :included, :relationships
 
     def initialize(id)
       @id = id
+      @included = []
     end
 
     def set_attributes(attributes)
@@ -16,16 +17,25 @@ module ArbolFinanciero
     end
 
     def set_relationships(relationships)
-      nil
+      @relationships = relationships
     end
 
-    def set_included(included_attrs)
-      @included ||= []
-      return if included_attrs.blank?
-
-      included_attrs.each do |data|
-        resource = Utils.resource_from_data(data)
-        @included << resource if resource.present?
+    def set_included(included_array)
+      relationships.each do |k, v|
+        data = v["data"]
+        case data
+        when Hash
+          resource_hash = included_array.select{|i| i["id"] == v["data"]["id"] && i["type"] == v["data"]["type"] }.first
+          resource = Utils.handle_response(data: resource_hash, included: included_array) if resource_hash
+          @included << resource if resource
+        when Array
+          included_specific_array = included_array.select{|i| i["type"] == k }
+          data.each do |d|
+            resource_hash = included_specific_array.select{|i| i["id"] == d["id"] && i["type"] == d["type"] }.first
+            resource = Utils.handle_response(data: resource_hash, included: included_specific_array) if resource_hash
+            @included << resource if resource
+          end
+        end
       end
     end
   end

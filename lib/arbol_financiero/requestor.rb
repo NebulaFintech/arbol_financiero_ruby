@@ -25,9 +25,7 @@ module ArbolFinanciero
       response = connection.method(http_method).call do |request|
         request.url self.class.join_url(api_base, resource_url)
         set_request_params(request, params) if params.present?
-        puts request.inspect
       end
-      puts response.body
       JSON.parse(response.body)
     end
 

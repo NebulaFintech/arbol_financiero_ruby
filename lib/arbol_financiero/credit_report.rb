@@ -1,5 +1,5 @@
 module ArbolFinanciero
-  class CreditReports < Resource
+  class CreditReport < Resource
     ATTR_IVARS = [:bureauReportResponse, :bureauReportSavedAt, :updatedAt]
     attr_reader(*ATTR_IVARS)
 

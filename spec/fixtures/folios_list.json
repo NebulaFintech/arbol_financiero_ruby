@@ -1,0 +1,120 @@
+{
+  "data": [{
+      "id": "6836",
+      "type": "folios",
+      "attributes": {
+        "folio": "6836",
+        "verticalType": "education",
+        "userFullName": "ELISA REYES RAMOS",
+        "financierName": "Laudex",
+        "status": "pending",
+        "statusName": "Sin enviar",
+        "productName": "Financiaturas Flexible UVM",
+        "createdAt": "2016-11-11T22:16:00.551-06:00",
+        "sentToVerificationAt": null,
+        "submittedAt": null,
+        "closedAt": null,
+        "changedStatusAt": "2016-11-11T22:16:00.961-06:00",
+        "daysInProcess": null,
+        "hoursInProcess": 0,
+        "financialObjectName": "Estudios en México",
+        "institutionName": "UVM",
+        "campusName": "Lomas Verdes",
+        "studyLevelName": "Licenciatura",
+        "financingPeriods": 9,
+        "financingPeriodLength": 6,
+        "financingPeriodAmount": "55000.0",
+        "studyProgram": "INGENIERIA EN TECNOLOGIA INTERACTIVA",
+        "currentDebt": "4950.0",
+        "scholarship": 40,
+        "finishedPeriods": null,
+        "averageGrade": null
+      },
+      "relationships": {
+        "product": {
+          "data": {
+            "id": "8",
+            "type": "products"
+          }
+        },
+        "applicant": {
+          "data": {
+            "id": "6836",
+            "type": "applicants"
+          }
+        },
+        "jointObligors": {
+          "data": [{
+            "id": "8210",
+            "type": "jointObligors"
+          }]
+        }
+      },
+      "links": {
+        "web": "https://solicitud.laudex.mx/financier/product_applications/6836",
+        "url": "/api/v1/folios/6836"
+      }
+    },
+    {
+      "id": "6833",
+      "type": "folios",
+      "attributes": {
+        "folio": "6833",
+        "verticalType": "education",
+        "userFullName": "DANIELA CRUZ MARTINEZ",
+        "financierName": "Laudex",
+        "status": "sent",
+        "statusName": "En proceso",
+        "productName": "Financiaturas Flexible UVM",
+        "createdAt": "2016-11-11T18:30:41.982-06:00",
+        "sentToVerificationAt": "2016-11-11T18:32:28.071-06:00",
+        "submittedAt": "2016-11-11T18:33:08.092-06:00",
+        "closedAt": null,
+        "changedStatusAt": "2016-11-11T18:33:08.092-06:00",
+        "daysInProcess": 11,
+        "hoursInProcess": 15,
+        "financialObjectName": "Estudios en México",
+        "institutionName": "UVM",
+        "campusName": "Tampico",
+        "studyLevelName": "Licenciatura",
+        "financingPeriods": 1,
+        "financingPeriodLength": 4,
+        "financingPeriodAmount": "15000.0",
+        "studyProgram": "LIC DERECHO ",
+        "currentDebt": "0.0",
+        "scholarship": 0,
+        "finishedPeriods": 1,
+        "averageGrade": "9.0"
+      },
+      "relationships": {
+        "product": {
+          "data": {
+            "id": "8",
+            "type": "products"
+          }
+        },
+        "applicant": {
+          "data": {
+            "id": "6833",
+            "type": "applicants"
+          }
+        },
+        "jointObligors": {
+          "data": [{
+            "id": "8207",
+            "type": "jointObligors"
+          }]
+        }
+      },
+      "links": {
+        "web": "https: //solicitud.laudex.mx/financier/product_applications/6833",
+        "url": "/api/v1/folios/6833"
+      }
+    }
+  ],
+  "links": {
+    "self": "https: //solicitud.laudex.mx/api/v1/folios?page%5Bnumber%5D=1&page%5Bsize%5D=100",
+    "next": "https://solicitud.laudex.mx/api/v1/folios?page%5Bnumber%5D=2&page%5Bsize%5D=100",
+    "last": "https://solicitud.laudex.mx/api/v1/folios?page%5Bnumber%5D=21&page%5Bsize%5D=100"
+  }
+}
