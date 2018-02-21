@@ -17,8 +17,9 @@ module ArbolFinanciero
       when Hash
         self.build_resource(data, included)
       when Array
-
-        List.new(links.merge(resources: data.map{|d| self.build_resource(d, included)}))
+        list_attributes = links
+        list_attributes.merge!(resources: data.map{|d| self.build_resource(d, included)})
+        List.new(list_attributes)
       end
     end
 
