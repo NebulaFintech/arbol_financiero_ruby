@@ -14,5 +14,9 @@ module ArbolFinanciero
       @type = "scores"
       super(id)
     end
+
+    def users
+      included.select{|i| i.type == "users"}
+    end
   end
 end

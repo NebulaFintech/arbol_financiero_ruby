@@ -1,12 +1,12 @@
 module ArbolFinanciero
-  class Applicant < Resource
+  class User < Resource
 
-    ATTR_IVARS = [:fullName]
+    ATTR_IVARS = [:email, :fullName, :createdAt]
 
     attr_reader(*ATTR_IVARS)
 
     def initialize(id)
-      @type = "applicants"
+      @type = "users"
       super(id)
     end
 

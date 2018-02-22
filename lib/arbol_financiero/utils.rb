@@ -12,7 +12,8 @@ module ArbolFinanciero
         "personalData" => ::ArbolFinanciero::PersonalData,
         "personalReferences" => ::ArbolFinanciero::PersonalReference,
         "previousStudies" => ::ArbolFinanciero::PreviousStudies,
-        "scores" => ::ArbolFinanciero::Score
+        "scores" => ::ArbolFinanciero::Score,
+        "users" => ::ArbolFinanciero::User
       }
     end
 
