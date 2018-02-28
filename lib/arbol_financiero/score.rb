@@ -6,7 +6,9 @@ module ArbolFinanciero
       :financialObjectName, :institutionName, :campusName, :studyLevelName,
       :studyProgram, :userFullName, :userEmploymentStatus, :userEmploymentPositionAge,
       :jointObligorEmploymentStatus, :jointObligorEmploymentPositionAge,
-      :userPreviousStudiesType, :userPreviousStudiesPublicOrPrivate, :verticalType, :createdAt,]
+      :userPreviousStudiesType, :userPreviousStudiesPublicOrPrivate,
+      :verticalType, :createdAt, :financingAmount, :applicantEndorsment,
+      :financingPeriods]
   
     attr_reader(*ATTR_IVARS)
 

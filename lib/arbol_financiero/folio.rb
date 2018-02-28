@@ -9,7 +9,8 @@ module ArbolFinanciero
         :financialObjectName, :campusName, :studyLevelName,
         :financingPeriods, :financingPeriodLength,
         :financingPeriodAmount, :studyProgram, :scholarship,
-        :finishedPeriods, :averageGrade]
+        :finishedPeriods, :averageGrade, :financingAmount,
+        :applicantEndorsment, :financingPeriods]
 
     attr_reader(*ATTR_IVARS)
 

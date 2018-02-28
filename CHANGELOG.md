@@ -1,3 +1,6 @@
+## [0.7.0](https://github.com/NebulaFintech/arbol_financiero_ruby/releases/tag/v0.6.0) - 2018-02-28
+### Change
+- Add missing attributes in folio and score.
 ## [0.7.0](https://github.com/NebulaFintech/arbol_financiero_ruby/releases/tag/v0.6.0) - 2018-02-21
 ### Change
 - Add User.
