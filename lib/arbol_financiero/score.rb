@@ -8,7 +8,7 @@ module ArbolFinanciero
       :jointObligorEmploymentStatus, :jointObligorEmploymentPositionAge,
       :userPreviousStudiesType, :userPreviousStudiesPublicOrPrivate,
       :verticalType, :createdAt, :financingAmount, :applicantEndorsment,
-      :financingPeriods]
+      :financingPeriods, :financialPurpose]
   
     attr_reader(*ATTR_IVARS)
 

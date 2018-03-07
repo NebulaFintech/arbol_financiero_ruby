@@ -48,7 +48,7 @@ module ArbolFinanciero
 
       def set_request_params(request, params)
         case request.method
-        when :post
+        when :post, :put
           request.body = params.to_json
         when :get
           request.params = params
