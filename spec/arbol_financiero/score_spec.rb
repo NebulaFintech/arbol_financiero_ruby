@@ -14,5 +14,6 @@ RSpec.describe ArbolFinanciero::Score do
     score = ArbolFinanciero::Utils.handle_response(score_request)
     expect(score).to be_a(ArbolFinanciero::Score)
     expect(score.disqualified).to eq(true)
+    expect(score.financier_users.first.name).to eq("Jorge Gajon")
   end
 end
