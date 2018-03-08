@@ -41,5 +41,9 @@ module ArbolFinanciero
     def personal_references
       included.select{|i| i.type == "personalReferences"}
     end
+
+    def previous_studies
+      included.select{|i| i.type == "previous_studies"}
+    end
   end
 end
