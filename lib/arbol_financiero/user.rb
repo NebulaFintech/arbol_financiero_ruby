@@ -43,7 +43,7 @@ module ArbolFinanciero
     end
 
     def previous_studies
-      included.select{|i| i.type == "previous_studies"}
+      included.select{|i| i.type == "previousStudies"}
     end
   end
 end
