@@ -27,11 +27,11 @@ module ArbolFinanciero
     end
 
     def employment_records
-      included.select{|i| i.type == "employmentRecord"}
+      included.select{|i| i.type == "employmentRecords"}
     end
 
     def personal_documents
-      included.select{|i| i.type == "personalDocument"}
+      included.select{|i| i.type == "personalDocuments"}
     end
   end
 end
