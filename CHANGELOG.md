@@ -1,3 +1,6 @@
+## [1.0.0](https://github.com/NebulaFintech/arbol_financiero_ruby/releases/tag/v1.0.0) - 2018-03-08
+### Change
+- Add user documents.
 ## [0.9.0](https://github.com/NebulaFintech/arbol_financiero_ruby/releases/tag/v0.9.0) - 2018-03-07
 ### Change
 - Add financier user.

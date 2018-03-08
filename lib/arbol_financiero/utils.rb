@@ -14,7 +14,9 @@ module ArbolFinanciero
         "previousStudies" => ::ArbolFinanciero::PreviousStudies,
         "scores" => ::ArbolFinanciero::Score,
         "users" => ::ArbolFinanciero::User,
-        "financierUsers" => ::ArbolFinanciero::FinancierUser
+        "financierUsers" => ::ArbolFinanciero::FinancierUser,
+        "employmentDocuments" => ::ArbolFinanciero::EmploymentDocument,
+        "personalDocuments" => ::ArbolFinanciero::PersonalDocument
       }
     end
 
