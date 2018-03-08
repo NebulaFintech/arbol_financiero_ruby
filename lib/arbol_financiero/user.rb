@@ -30,8 +30,8 @@ module ArbolFinanciero
       included.select{|i| i.type == "employmentRecord"}
     end
 
-    def employment_documents
-      included.select{|i| i.type == "employmentDocument"}
+    def personal_documents
+      included.select{|i| i.type == "personalDocument"}
     end
   end
 end
