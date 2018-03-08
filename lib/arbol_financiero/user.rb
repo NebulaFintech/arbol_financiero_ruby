@@ -37,5 +37,9 @@ module ArbolFinanciero
     def employment_documents
       included.select{|i| i.type == "employmentDocuments"}
     end
+
+    def personal_references
+      included.select{|i| i.type == "personalReferences"}
+    end
   end
 end
