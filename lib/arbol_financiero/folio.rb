@@ -23,5 +23,9 @@ module ArbolFinanciero
     def applicants
       included.select{|i| i.type == "applicants" }
     end
+
+    def project
+      included.select{|i| i.type == "project"}.first
+    end
   end
 end
