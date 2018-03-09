@@ -5,7 +5,7 @@ module ArbolFinanciero
       :statsFlooring, :statsRestrooms, :statsShower, :statsStove, :statsLightbulbs, :statsCars,
       :statsEducation, :incomePaymentFrequency, :incomePaymentType, :bankName, :bankAccount,
       :transferType, :cardOrClabeNumber, :personalExpensesDescription, :financialDataUseConsentment,
-      :legalDeclaration, :updatedAt]
+      :legalDeclaration, :updatedAt, :monthlyPersonalExpenses]
   
     attr_reader(*ATTR_IVARS)
 

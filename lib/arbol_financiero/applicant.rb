@@ -45,5 +45,13 @@ module ArbolFinanciero
     def previous_studies
       included.select{|i| i.type == "previousStudies"}
     end
+
+    def project
+      included.select{|i| i.type == "project"}.first
+    end
+
+    def financial_assets
+      included.select{|i| i.type == "financialAssets"}
+    end
   end
 end

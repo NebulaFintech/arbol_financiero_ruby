@@ -16,7 +16,9 @@ module ArbolFinanciero
         "users" => ::ArbolFinanciero::User,
         "financierUsers" => ::ArbolFinanciero::FinancierUser,
         "employmentDocuments" => ::ArbolFinanciero::EmploymentDocument,
-        "personalDocuments" => ::ArbolFinanciero::PersonalDocument
+        "personalDocuments" => ::ArbolFinanciero::PersonalDocument,
+        "project" => ::ArbolFinanciero::Project,
+        "financialAssets" => ::ArbolFinanciero::FinancialAsset
       }
     end
 
