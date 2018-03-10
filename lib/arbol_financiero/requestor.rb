@@ -33,17 +33,9 @@ module ArbolFinanciero
 
       def set_headers_for(connection)
         connection.headers['x-api-key'] = api_key
-        connection.headers['x-signature'] = signature
+        connection.headers['x-signature'] = Signature.new(api_key, secret_key).signature
         connection.headers['Accept'] = "application/vnd.api+json"
         connection.headers['Cache-Control'] = "no-cache"
-      end
-
-      def signature
-        timestamp = Time.now.to_i
-        timestamp = timestamp.to_s.slice(0, 9)
-        raw_signature = "#{self.api_key}#{timestamp}"
-        digest = OpenSSL::Digest.new("sha1")
-        OpenSSL::HMAC.hexdigest(digest, secret_key, raw_signature)
       end
 
       def set_request_params(request, params)

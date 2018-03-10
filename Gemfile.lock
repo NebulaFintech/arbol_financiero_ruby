@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    arbol_financiero (1.0.7)
+    arbol_financiero (1.0.8)
       activesupport
       faraday
       json

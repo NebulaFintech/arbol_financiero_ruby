@@ -1,4 +1,5 @@
 require "arbol_financiero/version"
+require "arbol_financiero/signature"
 require "arbol_financiero/score_table"
 require "arbol_financiero/mixins/find"
 require "arbol_financiero/mixins/where"
