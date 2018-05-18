@@ -1,4 +1,6 @@
 
+# frozen_string_literal: true
+
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "arbol_financiero/version"
@@ -9,8 +11,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Mauricio Murga"]
   spec.email         = ["murga.mauricio@gmail.com"]
 
-  spec.summary       = %q{Small Arbol Financiero client.}
-  spec.description   = %q{Small Arbol Financiero client.}
+  spec.summary       = "Small Arbol Financiero client."
+  spec.description   = "Small Arbol Financiero client."
   spec.homepage      = "https://github.com/NebulaFintech/"
   spec.license       = "MIT"
 
@@ -23,7 +25,7 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
+  spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
   spec.bindir        = "exe"
@@ -34,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "rubocop"
+  spec.add_dependency "activesupport"
   spec.add_dependency "faraday"
   spec.add_dependency "json"
-  spec.add_dependency "activesupport"
 end

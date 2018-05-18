@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module ArbolFinanciero
   class CreditReport < Resource
-    ATTR_IVARS = [:bureauReportResponse, :bureauReportSavedAt, :updatedAt]
-    
+    ATTR_IVARS = %i[bureauReportResponse bureauReportSavedAt updatedAt].freeze
+
     attr_reader(*ATTR_IVARS)
 
     def initialize(id)

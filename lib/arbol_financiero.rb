@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "arbol_financiero/version"
 require "arbol_financiero/signature"
 require "arbol_financiero/score_table"
@@ -28,8 +30,8 @@ require "arbol_financiero/utils"
 require "arbol_financiero/requestor"
 
 module ArbolFinanciero
-  require 'active_support'
-  require 'active_support/core_ext'
+  require "active_support"
+  require "active_support/core_ext"
 
   class << self
     attr_accessor :configuration
@@ -45,8 +47,8 @@ module ArbolFinanciero
     attr_accessor :api_base, :api_version, :connection, :api_key, :secret_key
 
     def initialize
-      @api_base = 'http://www.arbolfinanciero.com/api'
-      @api_version = 'v1'
+      @api_base = "http://www.arbolfinanciero.com/api"
+      @api_version = "v1"
       @connection = Faraday.new
       @api_key = nil
       @secret_key = nil

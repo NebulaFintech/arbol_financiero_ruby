@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module ArbolFinanciero
   class FinancialAsset < Resource
-    ATTR_IVARS = [:financialAssetType, :vehicleBrand, :vehicleYear,
-      :vehiclePaid, :propertyType, :propertyDeed, :propertyPaid, :createdAt,
-      :updatedAt, :researchableId, :researchableType, :value, :otherAssetsDescription, :sourceId]
-  
+    ATTR_IVARS = %i[financialAssetType vehicleBrand vehicleYear
+                    vehiclePaid propertyType propertyDeed propertyPaid createdAt
+                    updatedAt researchableId researchableType value otherAssetsDescription sourceId].freeze
+
     attr_reader(*ATTR_IVARS)
 
     def initialize(id)

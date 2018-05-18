@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ArbolFinanciero
   module Utils
     def self.types
@@ -29,10 +31,10 @@ module ArbolFinanciero
       links = response["links"]
       case data
       when Hash
-        self.build_resource(data, included)
+        build_resource(data, included)
       when Array
         list_attributes = links
-        list_attributes.merge!(resources: data.map{|d| self.build_resource(d, included)})
+        list_attributes[:resources] = data.map { |d| build_resource(d, included) }
         List.new(list_attributes)
       end
     end

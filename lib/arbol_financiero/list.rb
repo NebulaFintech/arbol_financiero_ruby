@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module ArbolFinanciero
   class List
     attr_reader :resources, :self, :next, :last
-    def initialize(options={})
+    def initialize(options = {})
       options = options.with_indifferent_access
       @resources = options.fetch(:resources)
       @self = options.fetch(:self)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ArbolFinanciero
   class Signature
     attr_reader :signature, :fallback_signature
@@ -13,15 +15,15 @@ module ArbolFinanciero
 
     private
 
-      def generate_signature(api_key, secret_key, offset: 0)
-        digest = OpenSSL::Digest.new "sha1"
+    def generate_signature(api_key, secret_key, offset: 0)
+      digest = OpenSSL::Digest.new "sha1"
 
-        timestamp = Time.now.to_i
-        timestamp = timestamp.to_s.slice 0, 9
-        timestamp = timestamp.to_i - offset
-        raw_signature = "#{api_key}#{timestamp}"
+      timestamp = Time.now.to_i
+      timestamp = timestamp.to_s.slice 0, 9
+      timestamp = timestamp.to_i - offset
+      raw_signature = "#{api_key}#{timestamp}"
 
-        OpenSSL::HMAC.hexdigest digest, secret_key, raw_signature
-      end
+      OpenSSL::HMAC.hexdigest digest, secret_key, raw_signature
+    end
   end
 end

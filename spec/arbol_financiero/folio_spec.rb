@@ -1,20 +1,22 @@
+# frozen_string_literal: true
+
 RSpec.describe ArbolFinanciero::Folio do
-  let(:complete_folio_response) { JSON.parse(file_fixture('complete_folio_response.json').read) }
+  let(:complete_folio_response) { JSON.parse(file_fixture("complete_folio_response.json").read) }
   let(:basic_folio_response) { JSON.parse(file_fixture('basic_folio_response.json').read) }
-  let(:credit_report_folio_response) { JSON.parse(file_fixture('credit_report_folio_response.json').read) }
-  let(:folios_list) { JSON.parse(file_fixture('folios_list.json').read) }
-  let(:configuration) { YAML.load_file(file_fixture('configuration.yml')) rescue {} }
+  let(:credit_report_folio_response) { JSON.parse(file_fixture("credit_report_folio_response.json").read) }
+  let(:folios_list) { JSON.parse(file_fixture("folios_list.json").read) }
+  let(:configuration) { YAML.load_file(file_fixture("configuration.yml")) }
 
   before do
     ArbolFinanciero.configure do |config|
-      config.api_base = configuration['api_base'] if configuration['api_base']
-      config.api_key = configuration['api_key'] || "my_api_key"
-      config.secret_key = configuration['secret_key'] || "my_api_secret"
+      config.api_base = configuration["api_base"] if configuration["api_base"]
+      config.api_key = configuration["api_key"] || "my_api_key"
+      config.secret_key = configuration["secret_key"] || "my_api_secret"
     end
   end
 
   it "gets a complete folio" do
-    folio_id = '282'
+    folio_id = "349"
     allow_any_instance_of(ArbolFinanciero::Requestor).to receive(:request).and_return(complete_folio_response)
     folio = ArbolFinanciero::Folio.find(folio_id, include: "**")
 
@@ -29,7 +31,7 @@ RSpec.describe ArbolFinanciero::Folio do
   end
 
   it "gets a basic folio" do
-    folio_id = '282'
+    folio_id = "349"
     allow_any_instance_of(ArbolFinanciero::Requestor).to receive(:request).and_return(basic_folio_response)
     folio = ArbolFinanciero::Folio.find(folio_id)
 
@@ -41,7 +43,7 @@ RSpec.describe ArbolFinanciero::Folio do
   end
 
   xit "gets a folio with creditReports" do
-    folio_id = '282'
+    folio_id = "349"
     allow_any_instance_of(ArbolFinanciero::Requestor).to receive(:request).and_return(credit_report_folio_response)
     folio = ArbolFinanciero::Folio.find(folio_id, include: "applicant.creditReport")
 

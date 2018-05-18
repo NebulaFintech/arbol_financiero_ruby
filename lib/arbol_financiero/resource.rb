@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ArbolFinanciero
   class Resource
     attr_reader :id, :type, :links, :included, :relationships
@@ -8,12 +10,12 @@ module ArbolFinanciero
     end
 
     def self.resource_url
-      self.name.demodulize.to_s.camelize(:lower).pluralize
+      name.demodulize.to_s.camelize(:lower).pluralize
     end
 
     def set_attributes(attributes)
       attributes = attributes.with_indifferent_access
-      self.class::ATTR_IVARS.map{ |ivar| instance_variable_set("@#{ivar}", attributes[ivar]) }
+      self.class::ATTR_IVARS.map { |ivar| instance_variable_set("@#{ivar}", attributes[ivar]) }
     end
 
     def set_links(links)
@@ -32,7 +34,7 @@ module ArbolFinanciero
           resource_hash = relation_resource_hash(v["data"], included_array)
           add_resource_to_included(resource_hash, included_array)
         when Array
-          included_specific_array = included_array.select{|i| i["type"] == k }
+          included_specific_array = included_array.select { |i| i["type"] == k }
           data.each do |d|
             resource_hash = relation_resource_hash(d, included_specific_array)
             add_resource_to_included(resource_hash, included_array)
@@ -43,13 +45,13 @@ module ArbolFinanciero
 
     private
 
-      def relation_resource_hash(relation_detail, list)
-        list.select{|l| l["id"] == relation_detail["id"] && l["type"] == relation_detail["type"] }.first
-      end
+    def relation_resource_hash(relation_detail, list)
+      list.select { |l| l["id"] == relation_detail["id"] && l["type"] == relation_detail["type"] }.first
+    end
 
-      def add_resource_to_included(resource_hash, included_array)
-        resource = Utils.handle_response(data: resource_hash, included: included_array) if resource_hash
-        @included << resource if resource
-      end
+    def add_resource_to_included(resource_hash, included_array)
+      resource = Utils.handle_response(data: resource_hash, included: included_array) if resource_hash
+      @included << resource if resource
+    end
   end
 end

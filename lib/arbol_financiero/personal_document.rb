@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 module ArbolFinanciero
   class PersonalDocument < Resource
-
-    ATTR_IVARS = [:documentType, :document, :updatedAt]
+    ATTR_IVARS = %i[documentType document updatedAt].freeze
 
     attr_reader(*ATTR_IVARS)
 

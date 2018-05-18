@@ -8,9 +8,9 @@ RSpec.describe ArbolFinanciero::Requestor do
 
   describe "#initialize" do
     it "fails if no configuration block has been called" do
-      expect {
+      expect do
         ArbolFinanciero::Requestor.new
-      }.to raise_error("ArbolFinanciero.configure has not been called!")
+      end.to raise_error("ArbolFinanciero.configure has not been called!")
     end
 
     context "With configuration" do
@@ -18,9 +18,9 @@ RSpec.describe ArbolFinanciero::Requestor do
         ArbolFinanciero.configure do |config|
         end
 
-        expect {
+        expect do
           ArbolFinanciero::Requestor.new
-        }.to raise_error("Api key has not been set!")
+        end.to raise_error("Api key has not been set!")
       end
 
       it "fails if a secret key is not configured" do
@@ -28,9 +28,9 @@ RSpec.describe ArbolFinanciero::Requestor do
           config.api_key = "my_api_key"
         end
 
-        expect {
+        expect do
           ArbolFinanciero::Requestor.new
-        }.to raise_error("Secret key has not been set!")
+        end.to raise_error("Secret key has not been set!")
       end
 
       it "does not fail if everything is configured" do
@@ -39,18 +39,18 @@ RSpec.describe ArbolFinanciero::Requestor do
           config.secret_key = "my_secret_key"
         end
 
-        expect {
+        expect do
           ArbolFinanciero::Requestor.new
-        }.to_not raise_error
+        end.to_not raise_error
       end
     end
   end
 
   describe "#request" do
     let(:response) { double(body: "{\"data\":{}}") }
-    let(:connection_double) {
+    let(:connection_double) do
       double(get: response, headers: {}).as_null_object
-    }
+    end
 
     before do
       ArbolFinanciero.configure do |config|
