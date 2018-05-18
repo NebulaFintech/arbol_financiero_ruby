@@ -26,5 +26,9 @@ module ArbolFinanciero
     def financier_users
       included.select { |i| i.type == "financierUsers" }
     end
+
+    def project
+      included.select{|i| i.type == "project"}.first
+    end
   end
 end
