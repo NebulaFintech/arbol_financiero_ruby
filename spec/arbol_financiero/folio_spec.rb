@@ -2,7 +2,7 @@
 
 RSpec.describe ArbolFinanciero::Folio do
   let(:complete_folio_response) { JSON.parse(file_fixture("complete_folio_response.json").read) }
-  let(:basic_folio_response) { JSON.parse(file_fixture('basic_folio_response.json').read) }
+  let(:basic_folio_response) { JSON.parse(file_fixture("basic_folio_response.json").read) }
   let(:credit_report_folio_response) { JSON.parse(file_fixture("credit_report_folio_response.json").read) }
   let(:folios_list) { JSON.parse(file_fixture("folios_list.json").read) }
   let(:configuration) { YAML.load_file(file_fixture("configuration.yml")) }

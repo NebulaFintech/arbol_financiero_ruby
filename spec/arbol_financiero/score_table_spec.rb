@@ -15,13 +15,13 @@ RSpec.describe ArbolFinanciero::ScoreTable do
   it "creates a ScoreTable" do
     score_table = ArbolFinanciero::ScoreTable.new(
       final_score: 0,
-                                                    final_score_text: "DESCALIFICADO",
-                                                    alerts: [
+      final_score_text: "DESCALIFICADO",
+      alerts: [
         ["Obligado solidario presenta cuentas MOP96/97", "try_other_os"],
         ["Obligado solidario presenta BC-Score bajo", "try_other_os"],
         ["Obligado solidario presenta cuenta con MOP4 o mayor", "alert"]
       ],
-                                                    variables: {
+      variables: {
         "profile": "B",
         "bc_score_usr": -9,
         "relationship_with_user": "Padre/Madre",
@@ -31,7 +31,7 @@ RSpec.describe ArbolFinanciero::ScoreTable do
         "net_income": "18000.0",
         "bc_payments_usr": 0
       },
-                                                    variable_metadata: [
+      variable_metadata: [
         %w[profile Perfil text],
         ["bc_score_usr", "BC-Score Titular", "number"],
         ["relationship_with_user", "Relación de con Titular", "text"],
@@ -55,10 +55,10 @@ RSpec.describe ArbolFinanciero::ScoreTable do
     expect do
       ArbolFinanciero::ScoreTable.new(
         final_score: nil,
-                                        final_score_text: nil,
-                                        alerts: nil,
-                                        variables: nil,
-                                        variable_metadata: nil
+        final_score_text: nil,
+        alerts: nil,
+        variables: nil,
+        variable_metadata: nil
       )
     end.to raise_error(ArgumentError)
   end

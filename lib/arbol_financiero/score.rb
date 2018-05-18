@@ -28,7 +28,7 @@ module ArbolFinanciero
     end
 
     def project
-      included.select{|i| i.type == "project"}.first
+      included.select { |i| i.type == "project" }.first
     end
   end
 end
